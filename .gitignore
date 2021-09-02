@@ -1,0 +1,10 @@
+# Juypter Notebooks
+.ipynb_checkpoints
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*pyc
+
+#Virtual Environents
+env
+venv
