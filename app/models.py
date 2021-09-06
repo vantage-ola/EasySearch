@@ -12,11 +12,11 @@ infotag = db.Table('infotag',
 
 class Info(db.Model):
     info_id = db.Column(db.Integer, primary_key= True)
-    name = db.Column(db.String(25))
-    location = db.Column(db.String(15))
-    url = db.Column(db.String(15))
-    address = db.Column(db.String(50))
-    phone_no = db.Column(db.String(15))
+    name = db.Column(db.String(50))
+    location = db.Column(db.String(20))
+    url = db.Column(db.String(50))
+    address = db.Column(db.String(75))
+    phone_no = db.Column(db.String(50))
     relationship = db.relationship('Tag', secondary=infotag, backref=db.backref('infotags', lazy='dyanmic'))
 
 class Tag(db.Model):
