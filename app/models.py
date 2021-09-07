@@ -51,7 +51,7 @@ class InfoSchema(ma.Schema):
 
     class Meta:
         model = Info
-        #'id','name','location','url','address','phone_no'
+        fields = ('id','name','location','url','address','phone_no')
 
 
 
