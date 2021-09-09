@@ -1,4 +1,19 @@
+body {
+  height: 100%;
+}
+
 .App {
-  text-align: center;
+  background-color: white;
  
 }
+
+header {
+  height: 6em;
+  padding: 10px;
+}
+
+header h1{
+  text-align: center;
+  font-size: 2.5em;
+}
+
