@@ -1,6 +1,6 @@
 import './App.css';
 import {useState, useEffect } from 'react';
-
+import InfoList from './components/InfoList'
 function App() {
 
   const [Info, setInfo] = useState([])
@@ -19,20 +19,10 @@ function App() {
   },[])
   return (
     <div className="App">
-      <h1>Quick Info</h1>
-
-      {Info.map(info=> {
-        return (
-          <div key = {info.id}> 
-            <h2>{info.name}</h2>
-            <h3>{info.location}</h3>
-            <h3>{info.address}</h3>
-            <h4>{info.phone_no}</h4>
-            <h5>{info.url}</h5>
-          </div> 
-
-        )
-      })}
+      <header>
+        <h1>Quick Info</h1>
+      </header>
+        <InfoList Info = {Info}/>
     </div>
   );
 }
