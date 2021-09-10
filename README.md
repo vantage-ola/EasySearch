@@ -1,2 +1,2 @@
-# EASYSEARCH
-Project Files for EasyDial
+# SIMPLEUIX
+Project Files for SIMPLEUIX
