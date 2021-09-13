@@ -1,6 +1,7 @@
 import './App.css';
 import {useState, useEffect } from 'react';
 import InfoList from './components/InfoList'
+import Simpluix from './img/SIMPLUIX-1.png';
 
 function App() {
 
@@ -20,7 +21,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>SimpleUIX</h1>
+          <img className="logo" src={Simpluix}/>
       </header>
           <InfoList Info = {Info}/>
     </div>
