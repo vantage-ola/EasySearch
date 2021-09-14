@@ -23,6 +23,10 @@ def getData():
 
     return jsonify(results)
 
+@app.route('/get', methods= ['GET'])
+def getTag():
+    return 
+    
 @app.route('/get/<id>/', methods = ['GET'])
 def getOneData(id):
     one_info = Info.query.get(id)
@@ -38,6 +42,16 @@ def updateData(id):
     url = request.json['url']
     address = request.json['address']
     phone_no = request.json['phone_no']
+
+    one_info.name = name
+    one_info.location = location
+    one_info.url = url
+    one_info.address = address
+    one_info.phone_info = phone_no
+
+    db.session.commit()
+    return info_schema.jsonify(one_info)
+
 
 @app.route('/delete/<id>/', methods= ['DELETE'])
 def deleteData(id):
