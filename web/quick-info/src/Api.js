@@ -14,10 +14,10 @@ const defaultConfig = {
 };
 
 export default {
-    fetchInfos: async (searchTerm, page) => {
+    fetchInfos: async (searchTerm, id) => {
         const endpoint = searchTerm
-        ? `${API_URL}get/search/${searchTerm}/page${page}`
-        : `${API_URL}get/page/${page}`;
+        ? `${API_URL}get/search/${searchTerm}/${id}`
+        : `${API_URL}get/${id}`;
       return await (await fetch(endpoint)).json();
     },
     fetchInfo: async (id) => {
