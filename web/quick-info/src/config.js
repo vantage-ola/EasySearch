@@ -9,6 +9,6 @@ export {
     API_URL,
 //   API_GET_INFO,
 //   API_GET_TAG
-}
+};
 
-export default config;
+//export default config;
