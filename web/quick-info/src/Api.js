@@ -14,10 +14,8 @@ const defaultConfig = {
 };
 
 export default {
-    fetchInfos: async (searchTerm, id) => {
-        const endpoint = searchTerm
-        ? `${API_URL}get/search/${searchTerm}/${id}`
-        : `${API_URL}get/${id}`;
+    fetchInfos: async () => {
+        const endpoint = `${API_URL}get`;
       return await (await fetch(endpoint)).json();
     },
     fetchInfo: async (id) => {
