@@ -44,7 +44,7 @@ class TagSchema(ma.Schema):
     
     class Meta:
         model = Tag
-    
+        fields = ('id', 'name')
 class InfoSchema(ma.Schema):
     
     relationship = ma.Nested(TagSchema, many=True)
@@ -57,4 +57,6 @@ class InfoSchema(ma.Schema):
 
 info_schema = InfoSchema()
 infos_schema = InfoSchema(many=True)
+
 tag_schema = TagSchema()
+tags_schema = TagSchema(many=True)
