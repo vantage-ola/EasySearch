@@ -1,6 +1,6 @@
 from app import app
 from flask import request,jsonify
-from models import db, Info, info_schema, infos_schema
+from models import db, Info,Tag, tags_schema, tag_schema, info_schema, infos_schema
 
 @app.route('/', methods=['POST'])
 def addData():
@@ -23,9 +23,12 @@ def getData():
 
     return jsonify(results)
 
-@app.route('/get', methods= ['GET'])
+@app.route('/tag', methods= ['GET'])
 def getTag():
-    return 
+    all_info = Tag.query.all()
+    results = tags_schema.dump(all_info)
+
+    return jsonify(results)
     
 @app.route('/get/<id>/', methods = ['GET'])
 def getOneData(id):
