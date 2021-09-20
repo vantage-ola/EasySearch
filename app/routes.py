@@ -2,7 +2,7 @@ from app import app
 from flask import request,jsonify
 from models import db, Info,Tag, tags_schema, tag_schema, info_schema, infos_schema
 
-@app.route('/', methods=['POST'])
+@app.route('/api', methods=['POST'])
 def addData():
     name = request.json['name']
     location = request.json['location']
@@ -16,27 +16,27 @@ def addData():
 
     return info_schema.jsonify(info)
 
-@app.route('/get', methods = ['GET'])
+@app.route('/api/get', methods = ['GET'])
 def getData():
     all_info = Info.query.all()
     results = infos_schema.dump(all_info)
 
     return jsonify(results)
 
-@app.route('/tag', methods= ['GET'])
+@app.route('/api/tag', methods= ['GET'])
 def getTag():
     all_info = Tag.query.all()
     results = tags_schema.dump(all_info)
 
     return jsonify(results)
     
-@app.route('/get/<id>/', methods = ['GET'])
+@app.route('/api/get/<id>/', methods = ['GET'])
 def getOneData(id):
     one_info = Info.query.get(id)
     
     return info_schema.jsonify(one_info)
 
-@app.route('/update/<id>/', methods= ['PUT'])
+@app.route('/api/update/<id>/', methods= ['PUT'])
 def updateData(id):
     one_info = Info.query.get(id)
 
@@ -56,7 +56,7 @@ def updateData(id):
     return info_schema.jsonify(one_info)
 
 
-@app.route('/delete/<id>/', methods= ['DELETE'])
+@app.route('/api/delete/<id>/', methods= ['DELETE'])
 def deleteData(id):
     one_info = Info.query.get(id)
 
