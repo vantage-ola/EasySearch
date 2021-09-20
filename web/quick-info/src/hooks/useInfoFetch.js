@@ -2,9 +2,6 @@ import { useState, useEffect } from 'react';
 
 import API from '../Api'
 
-const initialState = {
-
-}
 
 export const useInfoFetch = () => {
 
