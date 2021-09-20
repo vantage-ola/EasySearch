@@ -15,17 +15,17 @@ const defaultConfig = {
 
 export default {
     fetchInfos: async () => {
-        const endpoint = `${API_URL}get`;
+        const endpoint = `${API_URL}api/get`;
       return await (await fetch(endpoint)).json();
     },
     fetchInfo: async (id) => {
-        const endpoint = `${API_URL}get/${id}`;
+        const endpoint = `${API_URL}api/get/${id}`;
         return await (await fetch(endpoint)).json();
 
     },
 // Fix Tag Later
     fetchTag: async (id) => {
-        const endpoint = `${API_URL}tag/${id}`;
+        const endpoint = `${API_URL}api/tag/${id}`;
         return await (await fetch(endpoint)).json();
     }
 }
