@@ -1,10 +1,7 @@
 body {
-  height: 100%;
-}
-
-.App {
   background-color: whitesmoke;
 }
+
 
 header {
   height: 8em;
@@ -14,20 +11,8 @@ header {
 
 .logo {
   width: 45%;
-  margin: 15px 10.5%;
+  margin: 15px ;
 
-}
-
-
-.card-group {
- width: 80%;
- margin: 10px 10.5%;
- padding: 10px;
-}
-
-.card-body {
-  border: 1px solid black;
-  border-radius: 4px;
 }
 
 @media (min-width: 730px) {
@@ -35,13 +20,15 @@ header {
     height: 10em;
     text-align: left;
     padding: 20px;
-
   }
 
   .logo {
     width: 17%;
-    margin: 15px 10.5%;
+    margin: 15px;
   
   }
 
+
+
 }
+
