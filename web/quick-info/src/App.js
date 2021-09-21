@@ -1,17 +1,21 @@
 import './App.css';
-import InfoList from './components/InfoList';
-import Simpluix from './img/SIMPLUIX-1.png';
 import Home from './components/Home';
+
+import { HomeStyle } from './HomeStyle';
+
+import Header from './components/Header';
+
 
 function App() {
 
   return (
     <div className="App">
-      <header>
-          <img className="logo" src={Simpluix}/>
-      </header>
+      
+      <Header/>
+      <HomeStyle/>
      <Home/> 
-    </div>
+  </div>
+
   );
 }
 
