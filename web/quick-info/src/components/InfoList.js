@@ -1,9 +1,44 @@
-import React from 'react'
+import React, {useState} from 'react';
+
+import { Wrapper, Content} from "./SearchBar";
+
+import searchIcon from "../img/search-icon.png";
+
 
 function InfoList(props) {
+
+  const [searchTerm , setSearchTerm] = useState("");
+
+  const handleChange = e => {
+    setSearchTerm(e.target.value);
+  };
+  
     return (
         <div>
-            {props.Info && props.Info.map(info=> {
+      <Wrapper>
+        <Content>
+          <input 
+            type="text" 
+            placeholder="Search.."
+            onChange = {handleChange}
+          />
+          <img src = {searchIcon} alt='search-icon'/>
+        </Content>
+      </Wrapper>        
+            {props.Info && props.Info.filter((info) => {
+              if (searchTerm === "") {
+                return info
+              } else if (info
+                .name
+                .toLowerCase()
+                .includes(searchTerm.toLowerCase()) ||
+                info
+                .location
+                .toLowerCase()
+                .includes(searchTerm.toLowerCase())) {
+                return info
+              }
+            }).map(info=> {
         return (
           <div key = {info.id}>
             <div className ="card-group">
@@ -24,5 +59,5 @@ function InfoList(props) {
     )
 }
 
-export default InfoList
+export default InfoList;
 
