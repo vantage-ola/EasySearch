@@ -7,7 +7,6 @@ import { useInfoFetch } from '../hooks/useInfoFetch';
 
 // COMPONENTS
 import InfoList from './InfoList';
-import SearchBar from './SearchBar';
 import LoadSpinner from './LoadSpinner';
 
 const Home = () => {
@@ -16,7 +15,6 @@ const Home = () => {
 
     return(
         <div>
-            <SearchBar/>
             <InfoList Info = {state}/>
             <LoadSpinner/>
         </div>
