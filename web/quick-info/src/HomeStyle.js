@@ -6,7 +6,7 @@ export const HomeStyle = createGlobalStyle`
     }
     * {
         font-family: 'Montserrat';
-        font-size: 16px;
+        font-size: 17px;
         box-sizing: border-box;
     }
 
@@ -24,5 +24,6 @@ export const HomeStyle = createGlobalStyle`
          border: 1px solid grey;
          border-radius: 4px;
     }
+    
 
 `;
