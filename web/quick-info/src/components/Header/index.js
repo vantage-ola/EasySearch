@@ -1,3 +1,5 @@
+//HEADER COMPONENT
+
 import React from 'react';
 
 import SimpluixImg  from '../../img/SIMPLUIX-1.png';
