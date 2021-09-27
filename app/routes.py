@@ -1,6 +1,10 @@
 from app import app
 from flask import request,jsonify
+
 from models import db, Info,Tag, tags_schema, tag_schema, info_schema, infos_schema
+from utils import build_link_header
+
+BASE_URL = "/api/get"
 
 @app.route('/api', methods=['POST'])
 def addData():
@@ -18,10 +22,16 @@ def addData():
 
 @app.route('/api/get', methods = ['GET'])
 def getData():
-    all_info = Info.query.all()
-    results = infos_schema.dump(all_info)
+    page = request.args.get("page", 1, type=int)
+    per_page = request.args.get("per-page", 10, type=int)
 
-    return jsonify(results)
+    all_info = Info.query.paginate(page, per_page)
+    results = infos_schema.dump(all_info.items)
+
+    link_header = build_link_header(
+        query=all_info, base_url=BASE_URL, per_page=per_page
+    )
+    return jsonify(results), link_header
 
 @app.route('/api/tag', methods= ['GET'])
 def getTag():
