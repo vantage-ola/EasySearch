@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  background: whitesmoke;
+  background: var(--white);
   height: 150px;
   padding: 0 35px;
   
@@ -14,11 +14,11 @@ export const Content = styled.div`
   max-width: 1280px;
   width: 60%;
   height: 48px;
-  background: whitesmoke;
+  background: var(--white);
   margin: 0 auto;
   border-radius: 15px;
-  color: #2196F3;
-  border: 2px solid #2196F3;
+  color: var(--blue);
+  border: 2px solid var(--blue);
   border-radius: 7px;
 
   img {

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const LoadSpinner = styled.div`
 
  border: 5px solid #eee;
- border-top: 5px solid #2196F3;
+ border-top: 5px solid var(--blue);
  border-radius: 50%;
  width: 50px;
  height: 50px;

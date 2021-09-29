@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
 
+// COMPONENTS
 import { Wrapper, Content} from "./SearchBar";
 
+//IMAGES
 import searchIcon from "../img/search-icon.png";
 
 
