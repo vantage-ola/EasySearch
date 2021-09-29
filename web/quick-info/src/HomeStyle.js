@@ -3,6 +3,7 @@ import {createGlobalStyle} from "styled-components";
 export const HomeStyle = createGlobalStyle`
     :root {
         --white: whitesmoke;
+        --blue: #2196F3;
     }
     * {
         font-family: 'Montserrat';
