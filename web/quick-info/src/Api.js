@@ -14,8 +14,10 @@ const defaultConfig = {
 };
 
 export default {
-    fetchInfos: async () => {
-        const endpoint = `${API_URL}api/get`;
+    fetchInfos: async (page, perPage) => {
+        const endpoint = page
+        ?`${API_URL}api/get?page=${page}&per-page=${perPage}`
+        : `${API_URL}api/get?page=${page}`;
       return await (await fetch(endpoint)).json();
     },
     fetchInfo: async (id) => {
