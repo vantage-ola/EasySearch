@@ -4,15 +4,17 @@ export const HomeStyle = createGlobalStyle`
     :root {
         --white: whitesmoke;
         --blue: #2196F3;
+        --blueblack: rgb(15, 18, 22)
     }
     * {
+        color: var(--white);
         font-family: 'Montserrat';
         font-size: 17px;
         box-sizing: border-box;
     }
 
     body {
-        background-color: var(--white);
+        background-color: var(--blueblack);
         margin: 0;
     }
     .card-group {
@@ -20,10 +22,13 @@ export const HomeStyle = createGlobalStyle`
         margin: 10px 10.5%;
         padding: 10px;
        }
+    .card {
+        border: 2px solid var(--blue);
+        border-radius: 4px;
+    }
        
     .card-body {
-         border: 1px solid grey;
-         border-radius: 4px;
+        background-color: var(--blueblack);
     }
     
 

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  background: var(--white);
+  background: var(--blueblack);
   height: 150px;
   padding: 0 35px;
   
@@ -14,7 +14,6 @@ export const Content = styled.div`
   max-width: 1280px;
   width: 60%;
   height: 48px;
-  background: var(--white);
   margin: 0 auto;
   border-radius: 15px;
   color: var(--blue);
@@ -37,7 +36,7 @@ export const Content = styled.div`
     width: 95%;
     background: transparent;
     height: 40px;
-    color: rgb(22, 20, 20);
+    color: white;
     
 
     :focus {
