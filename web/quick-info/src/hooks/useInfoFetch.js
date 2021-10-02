@@ -4,7 +4,7 @@ import API from '../Api'
 
 
 export const useInfoFetch = () => {
-    const [page, perPage] = [1, 2]
+    const [page, perPage] = [1, 10]
 
     const [state, setState] = useState([]);
     const [loading, setLoading] = useState(false);   
@@ -26,6 +26,7 @@ export const useInfoFetch = () => {
         setLoading(false);
     };
 
+    // Fix total pages.
     const totalPages =  4 / perPage
 
     useEffect(() => {
@@ -36,7 +37,7 @@ export const useInfoFetch = () => {
     useEffect(() => {
         if (!isLoadingMore) return;
 
-        fetchInfos(page, perPage+2);
+        fetchInfos(page, perPage+10);
         setIsLoadingMore(false);
 
     }, [isLoadingMore,perPage, page])
