@@ -12,11 +12,12 @@ export const Wrapper = styled.div`
 
 export const Content = styled.div`
 
-    height: 8em;
+    height: 6em;
     text-align: center;
     padding: 15px;
 
     @media (min-width: 730px) {
+       height: 8em;
         display: flex;
         align_items: center;
         justify-content: space-between;
@@ -32,27 +33,16 @@ export const LogoImg = styled.img`
 
     @media (max-width: 730px) {
         width: 35%;
-        margin: 15px ;
+        margin: 0 100px;   
       
       }   
 `;
 
-export const NavButton = styled.button`
-    background-color: rgb(21,26,31);
-    color: white;
-    font-size: 20px;
-    padding: 10px 30px;
-    border: 2px solid var(--blue);
-    border-radius: 5px ;
-    margin: 10px 0px;
-    cursor: pointer;
+export const NavButton = styled.input`
+    height: 50px;
+    margin: 15px;
     
-    :hover {
-        opacity: 0.9;
-      }
-    
-      @media (max-width: 730px) {
-        width: 160px;
-      }
+    @media (max-width: 730px) {
 
+      }
 `;

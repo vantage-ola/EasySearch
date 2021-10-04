@@ -4,7 +4,7 @@ import React, {useState} from 'react';
 import { Wrapper, Content} from "./SearchBar";
 
 //IMAGES
-import searchIcon from "../img/search-icon.png";
+import searchIcon from "../img/search-icon-white.png";
 
 
 function InfoList(props) {
