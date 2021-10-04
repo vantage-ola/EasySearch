@@ -9,20 +9,19 @@ import { useInfoFetch } from '../hooks/useInfoFetch';
 import InfoList from './InfoList';
 import LoadSpinner from './LoadSpinner';
 import Button from './Button';
+import { Footer } from './Footer';
 
 const Home = () => {
  
     const { state, loading, error, page, totalPages, setIsLoadingMore } = useInfoFetch();
 
-    console.log(state);
-
-    if (error) return <div>Something went wrong ...</div>
+    if (error) return <div className="ErrorName">Something went wrong ...</div>
     return(
         <>
             <InfoList Info = {state}/>
             {loading && <LoadSpinner/>}
             {page < totalPages && !loading && (<Button text='Load More' callback={() => setIsLoadingMore(true)} />) }
-            
+            <Footer/>
         </>
     
         );
