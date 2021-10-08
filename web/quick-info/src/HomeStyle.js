@@ -35,6 +35,17 @@ export const HomeStyle = createGlobalStyle`
         background-color: var(--blueblack);
     }
     
+	.error-name {
+		font-size: 3rem;
+		padding: 8rem 0;
+		display: flex;
+    	justify-content: center;
+    	align-items: flex-start;
+
+		@media (max-width: 730px){
+			font-size: 1.5rem ;
+    	}
+    }
     
     /* Wrapping */
     .Tooltip-Wrapper {

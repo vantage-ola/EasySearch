@@ -15,7 +15,7 @@ const Home = () => {
  
     const { state, loading, error, page, totalPages, setIsLoadingMore } = useInfoFetch();
 
-    if (error) return <div className="ErrorName">Something went wrong ...</div>
+    if (error) return <div className="error-name">Something went wrong ...</div>
     return(
         <>
             <InfoList Info = {state}/>
