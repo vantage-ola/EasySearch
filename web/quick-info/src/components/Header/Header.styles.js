@@ -15,11 +15,12 @@ export const Content = styled.div`
     height: 6em;
     text-align: center;
     padding: 15px;
+    justify-content: center;
 
     @media (min-width: 730px) {
        height: 8em;
         display: flex;
-        align_items: center;
+        align-items: center;
         justify-content: space-between;
         max-width: 1280px;
         padding: 31px 0;
